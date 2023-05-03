@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clubname: MyString
+  evant: MyString
+  desc: MyText
+  when: 2023-05-03 20:02:14
+
+two:
+  clubname: MyString
+  evant: MyString
+  desc: MyText
+  when: 2023-05-03 20:02:14

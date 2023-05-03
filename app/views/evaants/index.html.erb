@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+<div style="padding:200px";>
+<h1 class="title">Events</h1>
+
+<div id="evaants" ,class="card">
+  <% @evaants.each do |evaant| %>
+    <%= render evaant %>
+    <p>
+      <%= link_to "Show this event", evaant, class:"card-footer-item button is-dark"  %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event", new_evaant_path  ,class:"button is-info"%>
+</div>

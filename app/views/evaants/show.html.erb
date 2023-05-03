@@ -1,0 +1,11 @@
+<div style="padding:200px";>
+<p style="color: green"><%= notice %></p>
+<div class="breadcrumb">
+<%= render @evaant %>
+</div>
+<div class="card-footer-item">
+  <%= link_to "Edit this event", edit_evaant_path(@evaant),class:"button is-info" %>
+  <%= link_to "Back to events", evaants_path,class:"button is-light" %>
+  <%= button_to "Destroy this event", @evaant, 'method': :delete ,class:"button is-dark"%>
+</div>
+</div>

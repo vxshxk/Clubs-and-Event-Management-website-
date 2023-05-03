@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :evaants
   resources :clubs do 
     resources :events
   end

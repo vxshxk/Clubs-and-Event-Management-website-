@@ -1,0 +1,33 @@
+<%= form_with(model: evaant) do |form| %>
+  <% if evaant.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evaant.errors.count, "error") %> prohibited this evaant from being saved:</h2>
+
+      <ul>
+        <% evaant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :clubname, class:"input is-rounded is-dark", placeholder:"clubname" %>
+  </div>
+
+  <div>
+    <%= form.text_field :evant , class:"input is-rounded is-dark", placeholder:"event"%>
+  </div>
+
+  <div>
+    <%= form.text_area :desc, class:"input is-rounded is-dark", placeholder:"description" %>
+  </div>
+
+  <div>
+    <%= form.datetime_field :when , class:"input is-rounded is-dark", placeholder:"when"%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

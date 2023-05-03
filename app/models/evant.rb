@@ -1,0 +1,2 @@
+class Evant < ApplicationRecord
+end

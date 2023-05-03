@@ -13,4 +13,6 @@
 </div>
 <% if !current_user.user? %>
   <%= link_to "New event", new_club_event_path, class:"button is-info" %>
+  <br>
+  <%= link_to "Can't create event?", evaants_path %>
 <% end %>

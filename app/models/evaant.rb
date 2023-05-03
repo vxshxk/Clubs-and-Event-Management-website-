@@ -1,0 +1,2 @@
+class Evaant < ApplicationRecord
+end
