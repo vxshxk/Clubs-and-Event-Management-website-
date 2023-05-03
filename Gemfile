@@ -30,6 +30,14 @@ gem "jbuilder"
 #devise
 gem 'devise', '~> 4.9', '>= 4.9.2'
 
+#oauth
+gem 'omniauth-google-oauth2'
+
+#google calendar
+gem 'google-apis-calendar_v3', '~> 0.28.0'
+
+#google api gem
+gem 'google-api-client'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

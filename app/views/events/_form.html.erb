@@ -1,0 +1,33 @@
+<%= form_with(model: event) do |form| %>
+  <% if event.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+        <% event.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :clubs_id, class:"input is-rounded is-dark", placeholder:"clubid" %>
+  </div>
+
+  <div>
+    <%= form.text_field :eventname, class:"input is-rounded is-dark", placeholder:"eventname" %>
+  </div>
+
+  <div>
+    <%= form.text_area :desc , class:"input is-rounded is-dark", placeholder:"Description"%>
+  </div>
+
+  <div>
+    <%= form.datetime_field :when , class:"input is-rounded is-dark", placeholder:"When"%>
+  </div>
+  <br>
+  <div  class="button is-rounded is-light">
+    <%= form.submit %>
+  </div>
+<% end %>

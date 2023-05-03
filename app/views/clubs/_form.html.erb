@@ -12,21 +12,19 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"input is-rounded is-dark", placeholder:"name" %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class:"input is-rounded is-dark", placeholder:"description"  %>
   </div>
-
-  <div>
+<br>
+<!--  <div>
     <%= form.label :type, style: "display: block" %>
     <%= form.text_field :type %>
-  </div>
+  </div> -->
 
-  <div>
+  <div class="button is-rounded is-light">
     <%= form.submit %>
   </div>
 <% end %>

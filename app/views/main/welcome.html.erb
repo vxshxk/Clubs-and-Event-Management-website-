@@ -4,22 +4,47 @@
 	<title>Clubs and Events</title>
 </head>
 <body>	
-	<div>
-	 <h1 align="Center">Welcome to Clubs and Events</h1>
-	 <br>
-	  <p align="Center">Under development</p>
+	<nav class="navbar">
+  <div class="container">
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+         <%if user_signed_in?%>
+           <%= link_to 'Show Clubs', clubs_path, class: "navbar-item"%>
+           <%= link_to 'Show Calendar', main_calendar_path, class: "navbar-item"%>
+         <%else%>
+           <%= link_to 'Sign in',  new_user_session_path , class: "navbar-item"%>
+           <%= link_to 'Sign up', new_user_registration_path , class: "navbar-item"%>
+          <%= link_to 'Sign in with Google',  user_google_oauth2_omniauth_callback_path, class:"navbar-item" %>
+         <% end %>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+           <%if user_signed_in? %>
+             <%= link_to 'Edit profile',  edit_user_registration_path , class: "button is-link"%>
+             <%= link_to 'Sign out', destroy_user_session_path, 'data-turbo-method': :delete, class: "button is-dark"%>              
+           <%end%> 
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <div align="Center">
-  <%if user_signed_in?%>
-     <%= link_to 'Show Clubs', clubs_path, class: "nav-link"%>
-     <%= link_to 'Edit profile',  edit_user_registration_path , class: "nav-link"%>
-     <%= link_to 'Sign out', destroy_user_session_path, 'data-turbo-method': :delete, class: "nav-link"%>
-     <p>You are a [<%= current_user.role %>]</p>
-  <%else%>
-     <%= link_to 'Sign in',  new_user_session_path , class: "nav-link"%>
-     <%= link_to 'Sign up', new_user_registration_path , class: "nav-link"%>
-  <% end %>
+  </div>
+</nav>
+
+<section class="hero is-dark is-fullheight-with-navbar">
+  <div class="hero-body">
+   <div class="">
+    <p style="padding-left: 75px"; class="title">
+      Clubs and Events.
+    </p>
+    <p style="padding-left: 75px"; class="subtitle">
+      Never miss any events in your campus.
+    </p>
    </div>
+  </div>
+</section>
+  
 </body>
 </html>

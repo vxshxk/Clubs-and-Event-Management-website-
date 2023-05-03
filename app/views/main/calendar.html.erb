@@ -1,0 +1,15 @@
+<div id="calendar"></div>
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      url: '/calendars',
+      type: 'GET',
+      dataType: 'json',
+      success: function(events) {
+        $('#calendar').fullCalendar({
+          events: events
+        });
+      }
+    });
+  });
+</script>

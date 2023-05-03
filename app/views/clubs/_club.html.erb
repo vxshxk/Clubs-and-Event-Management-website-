@@ -1,17 +1,21 @@
 <div id="<%= dom_id club %>">
-  <p>
+  <div class="card-header", style="padding:10px";>
+  <break>
+  <p class="card-header is-dark title is-4">
     <strong>Name:</strong>
-    <%= club.name %>
+    <%= club.name%>
   </p>
-
-  <p>
-    <strong>Description:</strong>
+  <p><strong>Description:</strong>
     <%= club.description %>
   </p>
-
-  <p>
+  <!--<p>
     <strong>Type:</strong>
     <%= club.type %>
+  </p>-->
+  <div style="padding-left:500px";>
+  <p style="padding-top:10px";>
+    <%= link_to 'Show events', club_events_path(@clubs||@club), class:"card-footer-item button is-info",style:"padding:10px"; %>
   </p>
-
+</div>
+</div>
 </div>
